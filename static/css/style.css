@@ -1,0 +1,502 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    z-index: 1;
+}
+.hm{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    background-color: rgb(71, 70, 63);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.hiasan-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.hiasan {
+  white-space: nowrap;
+  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+  opacity: 0.5;
+  font-weight: bold;
+  will-change: transform;
+}
+
+
+.stats-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 5%;
+            width: 100%;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        .stat-label {
+            font-size: clamp(0.1rem, 2vw, 1.2rem);
+            color: #aaa;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1%;
+        }
+
+        .stat-value {
+            font-size: clamp(1rem, 1.5vw, 3rem);
+            font-weight: bold;
+            color: rgb(234, 240, 245);
+            font-family: 'Courier New', monospace;
+        }
+
+
+.anjay {
+    font-size: clamp(0.01rem, 1.5vw, 2.5rem);
+    padding-top: 10%;
+    user-select: none;
+    line-height: 1cap;
+    color : rgb(71, 69, 51);
+    padding-bottom: 10%;
+    justify-content: center;
+    display: flex;
+    border-radius: 40px;
+    background-color: white;
+    width: 98%;
+
+}
+
+.form_bos {
+    justify-content:center ;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(71, 70, 63);
+}
+
+.apa_sih {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.anaknya_apasih {
+ justify-content:center ;
+ background-color: rgb(61, 60, 44);
+ padding-bottom: 12%;
+ border-radius: 5%;
+ display: flex; 
+ border-color: #312407;
+}
+
+/* Custom file upload */
+.file-upload-container {
+    margin-bottom: 30px;
+    justify-content: center;
+    display: flex;
+}
+
+.file-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.file-label:hover {
+    border-color: whitesmoke;
+    background-color: #2d1919;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(240, 244, 177, 0.884);
+}
+
+.file-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.file-name {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #dae08e;
+    word-break: break-all;
+}
+
+/* Gradient button predict */
+.predict-btn {
+    font-size: clamp(0.01rem, 0.5vw, 1.2rem);
+    font-weight: bold;
+    color: rgb(61, 60, 44);
+    background: linear-gradient(90deg, #faf4e6, #a9a9a7);
+    border: none;
+    border-radius: 50px;
+    max-width: 100%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.predict-btn:hover {
+    background-position: 100% 0;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(233, 232, 176, 0.5);
+    background: #2d1919;
+    color: whitesmoke;
+}
+
+.pokoknya_itu {
+    display:flex ;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+    padding-bottom: 2%;
+    border-radius: 8%;
+    width: 98%;
+    background-color: #f3f0f0;
+}
+
+.button{
+    justify-content: center;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(14, 2, 2);
+    background: linear-gradient(90deg, #dedecb, #f4f1ea);
+    background-size: 200% 100%;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 15px rgba(90, 105, 22, 0.3);
+}
+
+.note {
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info-list {
+  list-style: none;          /* buang bullet default */
+  padding-left: 0;           /* buang indent bawaan */
+  margin: 0;
+}
+
+/* item list */
+.info-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size:  clamp(0.1rem, 1.8vw, 0.9rem);
+  line-height: 1.6;
+  color: #000;
+}
+
+/* bullet custom */
+.info-list li::before {
+  content: "💮";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+}
+
+/* code style */
+.info-list code {
+  background-color: #f2f2f2;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* hint text */
+.hint {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.sample-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.sample-box {
+  background-color: rgb(61, 60, 44);
+  padding: 5%;
+  border-radius: 8%;
+  padding: 2rem 3rem;
+  text-align: center;
+}
+
+.sample-box h1 {
+  color: rgb(251, 250, 236);
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.download-link {
+  display: inline-block;
+  background-color: rgb(251, 250, 236);
+  color: #000;
+  padding: 0.7rem 2rem;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.download-link:hover {
+  background-color: #e8e6d8;
+}
+
+.form_bos {
+            background-color: #aaa;
+            justify-content: center;
+            display: flex;
+            gap: 3rem;
+            flex-direction: column;
+        }
+
+.pokoknya_itu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+     }
+
+        .apa_sih {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .anaknya_apasih {
+            width: 100%;
+            background-color: rgb(61, 60, 44);
+            padding: 2.5rem;
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            justify-content: center;
+        }
+
+        .note {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .info-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .info-list li {
+            position: relative;
+            padding-left: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-list li::before {
+            content: "💮";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2rem;
+        }
+
+        .info-list code {
+            background-color: #f2f2f2;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-family: 'Courier New', monospace;
+        }
+
+        .hint {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .sample-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+
+        .sample-box {
+            background-color: rgb(61, 60, 44);
+            padding: 2rem 2.5rem;
+            border-radius: 30px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .sample-box h1 {
+            color: rgb(251, 250, 236);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .download-link {
+            display: inline-block;
+            background-color: rgb(251, 250, 236);
+            color: #000;
+            padding: 0.8rem 2.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .download-link:hover {
+            background-color: #e8e6d8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .file-upload-container {
+            width: 100%;
+        }
+
+        .file-input {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .file-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1.5rem;
+            padding-left: 5rem 1.5rem;
+            padding-right: 5rem 1.5rem;
+            border: 3px dashed #555;
+            border-radius: 16px;
+            background-color: #e6e5e5;
+            color: #3a2424;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            text-align: center;
+        }
+
+        .file-label:hover {
+            border-color: whitesmoke;
+            background-color: #2d1919;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(240, 244, 177, 0.6);
+        }
+
+        .file-text {
+            font-weight: 600;
+        }
+
+        .file-name {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #dae08e;
+            word-break: break-all;
+            font-size: 0.9rem;
+        }
+
+        .predict-btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: rgb(61, 60, 44);
+            background: linear-gradient(90deg, #faf4e6, #a9a9a7);
+            background-size: 200% 100%;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 15px rgba(90, 105, 22, 0.3);
+        }
+
+        .predict-btn:hover {
+            background-position: 100% 0;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(233, 232, 176, 0.5);
+            background: #2d1919;
+            color: whitesmoke;
+        }
+
+        @media (max-width: 968px) {
+            .form_bos {
+                flex-direction: column;
+                padding: 3rem 1rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .pokoknya_itu,
+            .apa_sih {
+                max-width: 100%;
+            }
+        }
+
+        .terakhir {
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: rgb(245, 245, 238);
+            background: linear-gradient(90deg, #1f1b13, #322715);
+            background-size: 200% 100%;
+            border: none;
+            border-radius: 50px;
+            max-width: 100%;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            padding: 5%;
+        }
+
+         .terakhir:hover {
+            background-position: 100% 0;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(233, 232, 176, 0.5);
+            background: #2d1919;
+            color: whitesmoke;
+        }

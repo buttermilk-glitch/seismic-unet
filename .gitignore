@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+.env/
+
+# Model files
+*.h5
+*.pt
+*.pth
+*.onnx
+*.joblib
+*.pkl
+
+# Large data
+*.npz
+*.npy
+data/
+datasets/
+
+# Upload & result folders
+uploads/
+results/

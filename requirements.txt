@@ -1,0 +1,11 @@
+flask
+gunicorn
+tensorflow==2.16.1 
+numpy
+matplotlib
+h5py
+werkzeug
+scikit-learn
+pillow
+gdown                 
+scipy                       

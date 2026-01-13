@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIRST BREAK PICKING</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body style="padding-left: 0%; padding-left: 0%;">
+    <div style="display: flex; justify-content: center; padding-bottom: 1.1%;">
+        <div style="position: absolute; z-index: -1;width: 100%;">
+            <img style=" width: 100%;;opacity: 0.4;border-top: 4px solid rgba(245, 245, 245, 0.39); border-bottom: 4px solid rgba(245, 245, 245, 0.39); border-color: black;" src="{{ url_for('static', filename='images/g.png') }}" alt="">
+        </div>
+        <div style="z-index: 1;padding-top: 12%;">
+            <h1 class="header">FIRST BREAK PICKING</h1>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: right; padding-right: 5%; padding-top: 14%; padding-bottom: 2%;" >
+        <h2 style="font-size: clamp(0.5rem, 1.5vw, 1.5rem);"> CNN UNET </h2>
+    </div>
+
+    <div class="hiasan-wrapper">
+        <div class="hiasan">
+            <h1>WHAT IS IT WHAT IS IT WHAT IS IT WHAT IS IT WHAT IS IT WHAT IS IT WHAT IS IT WHAT IS IT</h1>
+        </div>
+    </div>
+
+    <div class="hm">
+        <div style="flex: 1; justify-content: center; display: flex; flex-direction: column; align-items: center; color: rgb(244, 243, 225);">
+            <div>
+                <h1 style="font-size:clamp(0.1rem, 1.7vw, 2.3rem); justify-content: center; padding-bottom: 10%;">
+                    PROJECT 102- SEGMENTATION
+                </h1>
+            </div>
+            <h4 style="text-align: justify; font-size: clamp(0.1rem, 1.2vw, 1rem); padding-left: 18%; padding-right: 18%; padding-bottom: 1%;">
+                THIS PROJECT FOCUSES ON AUTOMATING FIRST BREAK PICKING ON SEISMIC DATA USING A U-NET DEEP LEARNING ARCHITECTURE. THE MODEL IS DESIGNED TO ASSIST AND SIMPLIFY THE FIRST BREAK PICKING TASK BY DETECTING THE INITIAL ARRIVAL OF SEISMIC WAVES AUTOMATICALLY. TRAINED ON 15GB DATA OF +- 8000 GATHERS IN 10 EPOCHS. SEE THE DATA AND LICENSE HERE :
+                <div>
+                    <a style="color: rgb(144, 203, 255);" href="https://github.com/mila-iqia/hardpicks/tree/main">Data and</a>
+                    <a style="color: rgb(144, 203, 255);" href="https://www.apache.org/licenses/LICENSE-2.0.txt"> License </a>
+                </div>
+            </h4>
+            <div class="stats-section">
+                <div class="stat-item">
+                    <div class="stat-label">Dice Accuracy</div>
+                    <div class="stat-value" data-target="69.99">0.00%</div>
+                </div>
+            </div>
+        </div>
+        <div style="justify-content: center; display: flex; flex: 1; flex-direction: column;">
+            <div style="color: rgb(244, 243, 225); font-size:clamp(0.1rem, 1.2vw, 1rem) ; text-align: center; padding-right: 15%; padding-bottom: 2%;">
+                <h1> MODEL RESULT</h1>
+            </div>
+            <img style="width: 80%;" src="{{ url_for('static', filename='images/visual.png') }}" alt="">
+            <div style="flex: 1; display: flex; justify-content: center; align-items: center; color:rgb(244, 243, 225); padding-top: 2%; padding-right: 11%;  font-size:clamp(0.1rem, 1.2vw, 1rem)">
+                <h4 style="padding-right: 1%;"> See the details through the link :</h4>
+                <a href="{{ url_for('static', filename='document/kapsel_benar.pdf') }}">
+                    <p style="color: rgb(144, 203, 255);">Model Architecture</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="form_bos">
+
+        <div class="anjay">
+            <h1>Try With Your Own Data</h1>
+        </div>
+
+
+        <div class="pokoknya_itu">
+            <div class="note">
+                <ul class="info-list">
+                    <li>Upload a .npz file containing up to 10 seismic gathers.</li>
+                    <li>Required keys: seismic (shape: N×751×M) and n_traces (shape: N).</li>
+                    <li>The first gather will be visualized on this page.</li>
+                    <li>All predictions can be downloaded as a ZIP file.</li>
+                </ul>
+
+                <p class="hint">
+                    Not sure what the data looks like?
+                </p>
+
+                <div class="sample-section">
+                    <div class="sample-box">
+                        <h1>Try With This Little File XO</h1>
+                        <a href="#" class="download-link" download>
+                            Download Sample
+                        </a>
+                    </div>
+                </div>
+
+                <div class="apa_sih">
+                    <div class="anaknya_apasih">
+                        <form action="/" method="post" enctype="multipart/form-data">
+                            <div class="file-upload-container">
+                                <input type="file" name="npzfile" id="npzfile" class="file-input" accept=".npz" required>
+                                <label for="npzfile" class="file-label">
+                                    <span class="file-text">UPLOAD YOUR FILE</span>
+                                    <span class="file-name" id="fileName"></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="predict-btn">Predict First Break</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; background-color: white; margin-top: 1%; border-radius: 40px; width: 98%; padding-bottom: 2%;">
+            {% if uploaded_npz %}
+                <div style="text-align:center; margin-top:20px; color:rgb(78, 58, 25);">
+                    Upload .npz berhasil: <strong>{{ uploaded_npz }}</strong><br>
+                    Hasil prediksi untuk Gather Pertama (idx 0):
+                </div>
+                {% if vis_image %}
+                <div style="display: flex; justify-content: center; margin-top: 2%;">
+                    <img style="width: 50%;" src="{{ url_for('static', filename=vis_image) }}">
+                </div>
+                    
+                {% endif %}
+                {% if zip_download %}
+                    <div style="display: flex; justify-content: center; margin-top: 2%;">
+                        <a href="{{ url_for('download_zip', zip_filename=zip_download) }}" download>
+                            <button class="terakhir">Download Semua Prediksi (ZIP)</button>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+        </div>
+        
+    </div>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="{{ url_for('static', filename='js/josjis.js') }}"></script>
+</body>
+</html>
