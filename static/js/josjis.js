@@ -12,7 +12,7 @@ gsap.to(".hiasan", {
 
 function animateCounter(element, target, duration = 2000) {
             const start = 0;
-            const increment = target / (duration / 16); // 60 FPS
+            const increment = target / (duration / 16); 
             let current = start;
 
             const timer = setInterval(() => {
@@ -25,7 +25,6 @@ function animateCounter(element, target, duration = 2000) {
             }, 16);
         }
 
-        // Intersection Observer untuk trigger animasi pas scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
@@ -35,10 +34,9 @@ function animateCounter(element, target, duration = 2000) {
                 }
             });
         }, {
-            threshold: 0.5 // Trigger pas 50% element keliatan
+            threshold: 0.5 
         });
 
-        // Observe semua stat values
         document.querySelectorAll('.stat-value').forEach(stat => {
             observer.observe(stat);
         });
