@@ -1,6 +1,6 @@
 flask
 gunicorn
-tensorflow 
+tensorflow==3.13.1 
 numpy
 matplotlib
 h5py
